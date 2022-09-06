@@ -3,6 +3,8 @@ package model.entity;
 import model.entity.abstracts.Staff;
 
 public class SalesMan extends Staff {
+    private double salesAmount;
+    private double dealsAmount;
     public SalesMan() {
     }
 
