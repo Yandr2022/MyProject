@@ -3,52 +3,22 @@ package model.entity.abstracts;
 public class Staff {
     private String name;
     private double professionalExperience;
-    private int age;
-    private String gender;
-    private double wage;
-
+    private double salary;
     public Staff() {
 
     }
 
-    public Staff(String name, double professionalExperience, int age, String gender, double wage) {
-        this.name = name;
-        this.professionalExperience = professionalExperience;
-        this.age = age;
-        this.gender = gender;
-        this.wage = wage;
-    }
+    public Staff(String name, double professionalExperience, double salary) {
+        if (name != null) {
+            this.name = name;
+        }
+        if (professionalExperience >= 0) {
+            this.professionalExperience = professionalExperience;
+        }
+        if (salary >= 0) {
+            this.salary = salary;
+        }
 
-    public double getProfessionalExperience() {
-        return professionalExperience;
-    }
-
-    public void setProfessionalExperience(double professionalExperience) {
-        this.professionalExperience = professionalExperience;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public double getWage() {
-        return wage;
-    }
-
-    public void setWage(double wage) {
-        this.wage = wage;
     }
 
     public String getName() {
@@ -59,14 +29,26 @@ public class Staff {
         this.name = name;
     }
 
+    public double getProfessionalExperience() {
+        return professionalExperience;
+    }
+
+    public void setProfessionalExperience(double professionalExperience) {
+        this.professionalExperience = professionalExperience;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
     @Override
     public String toString() {
-        return "Staff\n{" +
-                "Name = " + name +
-                ", professional experience = " + professionalExperience +
-                ", age = " + age +
-                ", gender = '" + gender + '\'' +
-                ", wage = " + wage +
-                '}';
+        return"name = '" + name + '\'' +
+                ", professionalExperience = " + professionalExperience +
+                ", salary = " + salary ;
     }
 }
