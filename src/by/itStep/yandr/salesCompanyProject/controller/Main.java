@@ -1,6 +1,6 @@
-package controller;
+package by.itStep.yandr.salesCompanyProject.controller;
 
-import model.entity.SalesMan;
+import by.itStep.yandr.salesCompanyProject.model.entity.SalesMan;
 
 
 public class Main {
