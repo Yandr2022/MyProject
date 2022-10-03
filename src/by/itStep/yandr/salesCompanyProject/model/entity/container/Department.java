@@ -4,7 +4,8 @@ import by.itStep.yandr.salesCompanyProject.model.entity.abstracts.Staff;
 
 public interface Department {
     int size();
-    Staff getStaff(int index);
+
+    Staff get(int index);
 
 
 }
